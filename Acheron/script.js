@@ -94,19 +94,21 @@ document.addEventListener('DOMContentLoaded', () => {
         volumeSlider.style.background = `linear-gradient(to right, var(--sub-color) 0%, rgba(255, 255, 255, 0.1) ${value}%, rgba(255, 255, 255, 0.1) ${value}%, rgba(255, 255, 255, 0.1) 100%)`
     }
 
-    function playTrack(track) {
+    // Play Track Function
+    function playTrack(index) {
         trackItems.forEach((t) => t.classList.remove("active"))
+        const track = trackItems[index]
         track.classList.add("active")
         audioPlayer.src = track.dataset.src
         songTitle.textContent = track.querySelector(".track-name").textContent
         audioPlayer.play()
-        trackPos = trackItems.findIndex(track);
+        trackPos = index
     }
 
     // Track selection
-    trackItems.forEach((track) => {
+    trackItems.forEach((track, index) => {
         track.addEventListener("click", () => {
-            playTrack(track)
+            playTrack(index)
         })
     })
 
@@ -120,16 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     audioPlayer.addEventListener("ended", () => {
-        trackPos = trackPos == trackItems.length ? 0 : trackPos + 1;
-        nextTrack = trackItems[trackPos];
-        playTrack(nextTrack);
-    })
+        trackPos = (trackPos + 1) % trackItems.length
+        playTrack(trackPos)
+      })
+    
 
     // Initialize volume
     audioPlayer.volume = volumeSlider.value
+    audioPlayer.autoplay = true
     updateVolumeSliderColor();
 
-    audioPlayer.play()
+    playTrack(0)
 
     // Verse Management
     const verses = document.querySelectorAll(".verses a")
