@@ -106,7 +106,7 @@
   .character-image {
     flex: 0 0 auto;
     width: 244.5px;
-    height: 410px;
+    height: 100%;
     overflow: hidden;
     border: #4a4543 1px solid;
   }
