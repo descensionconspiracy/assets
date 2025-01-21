@@ -7,79 +7,79 @@
     --gradient-mid: #d6c9d3;
     --gradient-end: #b10000;
     --background: #0f0f0f;
-}
-
-/* Base styles */
-* {
+  }
+  
+  /* Base styles */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'D-DIN', sans-serif;
+    font-family: "D-DIN", sans-serif;
     scrollbar-width: thin;
     scrollbar-color: #7c5cff #0f0f0f;
-}
-
-body {
+  }
+  
+  body {
     background: var(--background);
     color: white;
     min-height: 100vh;
     overflow: hidden;
     font-size: 14px;
-}
-
-body b,
-body strong {
+  }
+  
+  body b,
+  body strong {
     color: var(--main-color);
-}
-
-.acolor {
+  }
+  
+  .acolor {
     color: var(--sub-color);
-}
-
-.meicolor {
+  }
+  
+  .meicolor {
     color: var(--main-color);
-}
-
-.altcolor {
+  }
+  
+  .altcolor {
     color: var(--accent-color);
-}
-
-.title {
+  }
+  
+  .title {
     background-color: var(--alt-color);
     text-transform: uppercase;
-}
-
-/* Background styling */
-.background {
+  }
+  
+  /* Background styling */
+  .background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-}
-
-.background-image {
+  }
+  
+  .background-image {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url('https://cdn.imgchest.com/files/7lxcppod2r7.png');
+    background-image: url("https://cdn.imgchest.com/files/7lxcppod2r7.png");
     background-position: center;
     background-size: cover;
     filter: blur(10px);
-}
-
-.pattern-overlay {
+  }
+  
+  .pattern-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url('https://cdn.imgchest.com/files/7lxcpam98b7.png');
+    background-image: url("https://cdn.imgchest.com/files/7lxcpam98b7.png");
     background-repeat: repeat;
     opacity: 0.5;
-}
-
-/* Container styles */
-.container {
+  }
+  
+  /* Container styles */
+  .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
@@ -89,9 +89,9 @@ body strong {
     justify-content: center;
     gap: 2rem;
     height: 100vh;
-}
-
-.profile-container {
+  }
+  
+  .profile-container {
     background: rgba(15, 15, 15, 0.95);
     padding: 1rem;
     display: flex;
@@ -100,38 +100,38 @@ body strong {
     width: 100%;
     max-height: min(500px, 50vh);
     border: var(--main-color) 1px solid;
-}
-
-/* Character image styles */
-.character-image {
+  }
+  
+  /* Character image styles */
+  .character-image {
     flex: 0 0 auto;
     width: 244.5px;
     height: 410px;
     overflow: hidden;
-    border: #4A4543 1px solid;
-}
-
-.character-image img {
+    border: #4a4543 1px solid;
+  }
+  
+  .character-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* Tab styles */
-.content-section {
+  }
+  
+  /* Tab styles */
+  .content-section {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.tabs {
+  }
+  
+  .tabs {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-}
-
-.tab-button {
+  }
+  
+  .tab-button {
     background: var(--sub-color);
     color: white;
     border: none;
@@ -143,38 +143,38 @@ body strong {
     transition: border 0.3s;
     transition: color 0.3s;
     position: relative;
-}
-
-#annihilationButton {
+  }
+  
+  #annihilationButton {
     min-width: 99px;
-}
-
-.tab-button:hover {
+  }
+  
+  .tab-button:hover {
     color: var(--main-color);
     border: var(--main-color) 1px solid;
-}
-
-.tab-button.active {
+  }
+  
+  .tab-button.active {
     background: var(--main-color);
     border: var(--main-color) 1px solid;
-}
-
-.tab-button.active:hover {
+  }
+  
+  .tab-button.active:hover {
     color: white;
-}
-
-.tab-content {
+  }
+  
+  .tab-content {
     display: none;
     min-height: min(500px, 30vh);
     overflow-y: auto;
-}
-
-.tab-content.active {
+  }
+  
+  .tab-content.active {
     display: block;
-}
-
-/* Update the verses styles for better visibility and interaction */
-.verses {
+  }
+  
+  /* Update the verses styles for better visibility and interaction */
+  .verses {
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -189,14 +189,14 @@ body strong {
     left: 0;
     width: 100%;
     /* Ensure verses cover the full width of the button */
-}
-
-.tab-button:hover .verses {
+  }
+  
+  .tab-button:hover .verses {
     opacity: 1;
     visibility: visible;
-}
-
-.verses a {
+  }
+  
+  .verses a {
     text-decoration: none;
     padding: 0.5rem;
     font-size: 0.7rem;
@@ -204,62 +204,62 @@ body strong {
     width: 100%;
     color: var(--sub-color);
     transition: background-color 0.3s, color 0.3s;
-}
-
-.verses a:hover {
+  }
+  
+  .verses a:hover {
     color: var(--main-color);
     background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Add styles for the active verse */
-.verses a.active {
+  }
+  
+  /* Add styles for the active verse */
+  .verses a.active {
     color: var(--main-color);
     background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Custom audio player styles */
-.custom-player {
+  }
+  
+  /* Custom audio player styles */
+  .custom-player {
     background: rgba(15, 15, 15, 0.95);
     padding: 1rem;
     width: 100%;
     max-width: 720px;
     border-radius: 8px;
-}
-
-.player-info {
+  }
+  
+  .player-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-}
-
-.progress-container {
+  }
+  
+  .progress-container {
     width: 100%;
     height: 4px;
     background: rgba(255, 255, 255, 0.1);
     margin: 1rem 0;
     cursor: pointer;
-}
-
-.progress-bar {
+  }
+  
+  .progress-bar {
     width: 100%;
     height: 100%;
     position: relative;
-}
-
-.progress {
+  }
+  
+  .progress {
     position: absolute;
     height: 100%;
     background: var(--main-color);
     width: 0;
-}
-
-.controls {
+  }
+  
+  .controls {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.play-pause {
+  }
+  
+  .play-pause {
     position: relative;
     width: 40px;
     height: 40px;
@@ -268,9 +268,9 @@ body strong {
     border: none;
     cursor: pointer;
     transition: background 0.3s;
-}
-
-.play-pause svg {
+  }
+  
+  .play-pause svg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -278,49 +278,49 @@ body strong {
     width: 24px;
     height: 24px;
     fill: white;
-}
-
-.play-icon {
+  }
+  
+  .play-icon {
     opacity: 1;
-}
-
-.pause-icon {
+  }
+  
+  .pause-icon {
     opacity: 0;
-}
-
-.play-pause.playing .play-icon {
+  }
+  
+  .play-pause.playing .play-icon {
     opacity: 0;
-}
-
-.play-pause.playing .pause-icon {
+  }
+  
+  .play-pause.playing .pause-icon {
     opacity: 1;
-}
-
-.play-pause:hover {
+  }
+  
+  .play-pause:hover {
     background: var(--sub-color);
-}
-
-.volume-control {
+  }
+  
+  .volume-control {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.volume-button {
+  }
+  
+  .volume-button {
     background: none;
     border: none;
     color: white;
     cursor: pointer;
     padding: 0.5rem;
-}
-
-.volume-button svg {
+  }
+  
+  .volume-button svg {
     width: 24px;
     height: 24px;
     fill: currentColor;
-}
-
-.volume-slider {
+  }
+  
+  .volume-slider {
     -webkit-appearance: none;
     width: 100px;
     height: 4px;
@@ -328,13 +328,13 @@ body strong {
     outline: none;
     transition: opacity 0.2s;
     opacity: 0.7;
-}
-
-.volume-slider:hover {
+  }
+  
+  .volume-slider:hover {
     opacity: 1;
-}
-
-.volume-slider::-webkit-slider-thumb {
+  }
+  
+  .volume-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 12px;
@@ -343,113 +343,109 @@ body strong {
     background: var(--sub-color);
     cursor: pointer;
     transition: background-color 0.2s;
-}
-
-.volume-slider::-moz-range-thumb {
+  }
+  
+  .volume-slider::-moz-range-thumb {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background: var(--sub-color);
     cursor: pointer;
     transition: background-color 0.2s;
-}
-
-.volume-slider:active::-webkit-slider-thumb,
-.volume-slider:active::-moz-range-thumb {
+  }
+  
+  .volume-slider:active::-webkit-slider-thumb,
+  .volume-slider:active::-moz-range-thumb {
     background: var(--main-color);
-}
-
-
-.tracklist {
+  }
+  
+  .tracklist {
     margin-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1rem;
-}
-
-.track-item {
+  }
+  
+  .track-item {
     display: flex;
     align-items: center;
     padding: 0.5rem;
     cursor: pointer;
     transition: background 0.3s;
-}
-
-.track-item:hover {
+  }
+  
+  .track-item:hover {
     background: rgba(255, 255, 255, 0.1);
-}
-
-.track-item.active {
+  }
+  
+  .track-item.active {
     color: var(--main-color);
-}
-
-.track-number {
+  }
+  
+  .track-number {
     width: 30px;
     opacity: 0.5;
-}
-
-/* Spoiler styles */
-.spoiler {
+  }
+  
+  /* Spoiler styles */
+  .spoiler {
     background-color: var(--main-color);
     color: transparent;
     user-select: none;
     transition: all 0.3s ease;
-}
-
-.spoiler.revealed {
+  }
+  
+  .spoiler.revealed {
     background-color: transparent;
     color: inherit;
-}
-
-.spoiler.revealed.gradient-text {
-    background: linear-gradient(to right,
-            var(--gradient-start),
-            var(--gradient-mid),
-            var(--gradient-end));
+  }
+  
+  .spoiler.revealed.gradient-text {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     display: inline-block;
-}
-
-.spoiler.revealed.meicolor {
+  }
+  
+  .spoiler.revealed.meicolor {
     color: var(--main-color);
-}
-
-.spoiler.revealed.acolor {
+  }
+  
+  .spoiler.revealed.acolor {
     color: var(--sub-color);
-}
-
-.spoiler.revealed.altcolor {
+  }
+  
+  .spoiler.revealed.altcolor {
     color: var(--accent-color);
-}
-
-/* More Info Styles */
-.more-info {
+  }
+  
+  /* More Info Styles */
+  .more-info {
     position: relative;
     display: inline-block;
     cursor: help;
     border-bottom: 1px dotted var(--sub-color);
     overflow: visible;
-}
-
-.spoiler.more-info{ 
+  }
+  
+  .spoiler.more-info {
     color: transparent;
-}
-
-.more-info::after,
-.spoiler.revealed.more-info::after {
+  }
+  
+  .more-info::after,
+  .spoiler.revealed.more-info::after {
     content: "?";
     display: inline-block;
     font-size: 0.7em;
     margin-left: 2px;
     vertical-align: super;
-}
-
-.spoiler.more-info::after {
+  }
+  
+  .spoiler.more-info::after {
     content: "";
-}
-
-.popup {
+  }
+  
+  .popup {
     visibility: hidden;
     position: absolute;
     bottom: 125%;
@@ -466,31 +462,31 @@ body strong {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
-}
-
-.more-info:hover .popup,
-.spoiler.revealed.more-info:hover,
-.spoiler.revealed.more-info:hover .popup {
+  }
+  
+  .more-info:hover .popup,
+  .spoiler.revealed.more-info:hover,
+  .spoiler.revealed.more-info:hover .popup {
     visibility: visible;
     opacity: 1;
-}
-
-.more-info.acolor:hover {
+  }
+  
+  .more-info.acolor:hover {
     color: var(--main-color);
     transition: color 0.3s;
-}
-
-.more-info.meicolor:hover {
+  }
+  
+  .more-info.meicolor:hover {
     color: var(--sub-color);
     transition: color 0.3s;
-}
-
-.spoiler.more-info:hover .popup {
+  }
+  
+  .spoiler.more-info:hover .popup {
     visibility: hidden;
     opacity: 0;
-}
-
-.more-info .popup::after {
+  }
+  
+  .more-info .popup::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -499,49 +495,90 @@ body strong {
     border-width: 5px;
     border-style: solid;
     border-color: rgba(15, 15, 15, 0.95) transparent transparent transparent;
-}
-
-/* Scrollbar styles */
-::-webkit-scrollbar {
+  }
+  
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
     width: 12px;
-}
-
-::-webkit-scrollbar-track {
+  }
+  
+  ::-webkit-scrollbar-track {
     background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
+  }
+  
+  ::-webkit-scrollbar-thumb {
     background: var(--sub-color);
     border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
     background: var(--main-color);
-}
-
-.tracklist {
+  }
+  
+  .tracklist {
     margin-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1rem;
-}
-
-.track-item {
+  }
+  
+  .track-item {
     display: flex;
     align-items: center;
     padding: 0.5rem;
     cursor: pointer;
     transition: background 0.3s;
-}
-
-.track-item:hover {
+  }
+  
+  .track-item:hover {
     background: rgba(255, 255, 255, 0.1);
-}
-
-.track-item.active {
+  }
+  
+  .track-item.active {
     color: var(--main-color);
-}
-
-.track-number {
+  }
+  
+  .track-number {
     width: 30px;
     opacity: 0.5;
-}
+  }
+  
+  /* Add these styles at the end of your existing CSS file */
+  
+  .audio-prompt {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(15, 15, 15, 0.95);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .audio-prompt.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .audio-prompt button {
+    background-color: var(--sub-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .audio-prompt button:hover {
+    background-color: var(--main-color);
+  }
+  
+  
