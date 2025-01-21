@@ -129,6 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     audioPlayer.volume = volumeSlider.value
     updateVolumeSliderColor();
 
+    audioPlayer.play()
+
     // Verse Management
     const verses = document.querySelectorAll(".verses a")
     const bioContent = document.getElementById("bio")
