@@ -138,7 +138,7 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     border: var(--sub-color) 1px solid;
     transition: border 0.3s;
     transition: color 0.3s;
