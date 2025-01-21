@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const annihilationButton = document.getElementById("annihilationButton")
     const verses = document.querySelectorAll(".verses a")
     const bioContent = document.getElementById("bio")
-    const verseStory = document.getElementById("verseStory")
+    const verse_story = document.getElementById("verse-story")
 
     const verseData = {
         "self-annihilator": {
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <b>SPECIES</b> <span class="spoiler">Oni</span><br>
                     <b>PLANET OF ORIGIN</b> <span class="spoiler">Izumo</span><br>
                     <b>ALLEGIANCE</b> <span class="acolor">Galaxy Rangers</span> <span
-                        class="spoiler">(allegedly)</span>, <span class="meicolor spoiler">Self-Annihilators</span><br>
+                        class="spoiler">(allegedly)</span>, <span class="meicolor spoiler more-info" data-info="Beings consumed by the concept of <b>NIHILITY</b>, existing in a state of purposelessness.">Self-Annihilators</span><br>
                     <b>PATH</b> Nihility <br>
                     <b>WEAPON</b> 180 cm/70 inch-long Ōdachi by the name of <span class="meicolor">Naught</span><br>
                     <br>
@@ -245,18 +245,18 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault()
             const selectedVerse = e.target.dataset.verse
             updateVerse(selectedVerse)
+            document.querySelectorAll(".tab-button").forEach((tab) => tab.classList.remove("active"))
+            document.querySelectorAll(".tab-content").forEach((content) => content.classList.remove("active"))
+            document.querySelector('[data-tab="verse-story"]').classList.add("active")
+            document.getElementById("verse-story").classList.add("active");
         }
     })
 
     function updateVerse(verse) {
         const data = verseData[verse]
-        annihilationButton.innerHTML = verse + `<div class="verses">
-                            <a href="#" data-verse="self-annihilator">SELF-ANNIHILATOR</a>
-                            <a href="#" data-verse="wanderer">WANDERER SWORDSWOMAN</a>
-                            <a href="#" data-verse="hashira">THE HASHIRA</a>
-                          </div>`
+        document.getElementById("verse-title").innerHTML = verse;
         bioContent.innerHTML = data.bio
-        verseStory.innerHTML = data.content
+        verse_story.innerHTML = data.content
 
         verses.forEach((v) => v.classList.remove("active"))
         document.querySelector(`[data-verse="${verse}"]`).classList.add("active")
@@ -264,6 +264,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize with the default verse
     updateVerse("self-annihilator")
+
+    // More Info Popup Management
+    const moreInfoElements = document.querySelectorAll(".more-info")
+  
+    moreInfoElements.forEach((element) => {
+      const popup = document.createElement("span")
+      popup.className = "popup"
+      popup.innerHTML = element.dataset.info
+      element.appendChild(popup)
+    })
 })
 
 
