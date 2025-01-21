@@ -132,8 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
     audioPlayer.autoplay = true
     updateVolumeSliderColor();
 
-    playTrack(0)
-
     // Verse Management
     const verses = document.querySelectorAll(".verses a")
     const bioContent = document.getElementById("bio")
