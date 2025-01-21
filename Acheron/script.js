@@ -196,8 +196,9 @@ document.addEventListener("DOMContentLoaded", () => {
                       to uphold justice for the locals out of the belief that benevolence and justice must be upheld by personal action.">
                       Galaxy Rangers</span> (self-proclaimed) </span>, 
                       <span class="meicolor more-info" data-info="Beings who, after inadvertently stepping into the IX's shadow, 
-                      have become consumed by the concept of <b>NIHILITY</b>, becoming cursed to a state of nothingness and meaninglessness. 
-                      Each and every aspect of theirs, be it memories, emotions or feelings, are condemned to fadee and wither away, until the very evidence of their existence disappears,
+                      have become consumed by the concept of <b>NIHILITY</b>, becoming cursed to a state of nothingness and meaninglessness,
+                      wandering aimlessly across the world, spreading the Shadow of IX where they set foot.
+                      Each and every aspect of theirs, be it memories, emotions or feelings, are condemned to fade and wither away, until the very evidence of their existence disappears,
                       as if consumed by a black hole at the end of the horizon.">Self-Annihilators</span><br>
                       <b>PATH</b> Nihility <br>
                       <b>WEAPON</b> 180 cm/70 inch-long Ōdachi by the name of <span class="meicolor">Naught</span><br>
@@ -210,14 +211,22 @@ document.addEventListener("DOMContentLoaded", () => {
                       sole purpose of erradicating its inhabitants. Those of Izumo found
                       themselves in a long, protracted
                       war, rapidly accelerating the planet's development. <br><br>As the war came to a close, <span
-                          class="acolor">Acheron</span> and <span class="altcolor">Hakuhatsu Ki</span> fought to
+                          class="acolor">Acheron</span> and <span class="altcolor more-info" data-info="One of her best friends, and the responsible for attempting to transform all of Izumo's people into spirits, locked in an eternal, perfect dream. In Acheron's world, 
+     he could be likened to Kevin Kaslana, from Honkai Impact 3rd.">Hakuhatsu Ki</span> fought to
                       determine
                           Izumo's future. A meaningless
                       effort; for both Izumo and Takamagahara had long been sinking into the
-                      <span class="meicolor">Shadow of IX.</span> As Acheron
-                      realized the futility of their actions, she was consumed by the concept of <span
-                          class="meicolor">NIHILITY</span>, becoming a <span
-                          class="meicolor">Self-Annihilator</span>, losing the belief of all meaning to her own
+                      <span class="meicolor more-info" data-info="A Shadow of IX or Shadow of Nihility is an unintended creation of IX, the Aeon of Nihility, 
+                      that exists in many forms across the universe.">Shadow of IX.</span> As Acheron
+                      realized the futility of their actions, she was consumed by the concept of <span class="meicolor more-info" data-info="Nihility here refers to the Aeon of Nihility—
+                      that is, the primordial outer god governing the concept of non-existence, 
+                      of which Acheron is an Emanator, or 'Avatar' of. <br>
+                      You may gaze deep into the vast grandeur of the stars, but do not glance at the abyss of the void... 
+                      for it holds nothing except for the ability to make mortals lose all reason and thought."><b>NIHILITY</b></span>, becoming a <span class="meicolor more-info" data-info="Beings who, after inadvertently stepping into the IX's shadow, 
+                      have become consumed by the concept of <b>NIHILITY</b>, becoming cursed to a state of nothingness and meaninglessness,
+                      wandering aimlessly across the world, spreading the Shadow of IX where they set foot.
+                      Each and every aspect of theirs, be it memories, emotions or feelings, are condemned to fade and wither away, until the very evidence of their existence disappears,
+                      as if consumed by a black hole at the end of the horizon.">Self-Annihilator</span>, losing the belief of all meaning to her own
                       existence.
   <br><br>
                       <span class="title">I ENDED THAT MAN'S LIFE––<b>ALONE</b>.</span> With her sense of
@@ -299,20 +308,20 @@ document.addEventListener("DOMContentLoaded", () => {
   <br><br>
   Mei saw the first signs of its cracks: some factions clinging to obsolete traditions,
   others discarding humanity’s essence in their pursuit of progress, and the growing allure of their machinations.
-  <br><br>It was <span class="altcolor more-info" data-info="In Acheron's world, 
+  <br><br>It was <span class="altcolor more-info" data-info="One of her best friends, and the responsible for attempting to transform all of Izumo's people into spirits, locked in an eternal, perfect dream. In Acheron's world, 
      he could be likened to Kevin Kaslana, from Honkai Impact 3rd.">Hakuhatsu Ki</span>
   who embodied this divide most profoundly—a childhood friend turned rival,
   whose brilliance and charisma drew countless followers to his vision.
   <br><br>
   <span class="title">There is no salvation in stagnation. A blade must cut forward—or rust where it stands.</span>
-  Mei and Hakuhatsu Ki’s ideologies clashed, their debates growing colder as the world around them spiraled toward
+  Mei and <span class="altcolor">Hakuhatsu Ki</span>’s ideologies clashed, their debates growing colder as the world around them spiraled toward
   collapse.
   Takamagahara’s shadow deepened, and strange miasmas began to seep into Izumo’s skies.<br><br>
   It was only when her best friend, Asuka, had her life threatened,
-  that Mei finally did give in to Hakuhatsu Ki's ideology, much to Asuka's own chagrin. It was, after all, the only
+  that Mei finally did give in to <span class="altcolor">Hakuhatsu Ki</span>'s ideology, much to Asuka's own chagrin. It was, after all, the only
   way to save her. But cities vanished into the void, their lights extinguished by an insatiable darkness: such was the
   price
-  for usurping the Kami's sovereignity. Amidst the chaos, Asuka fell, despite the enactment of Hakuhatsu Ki's plan.
+  for usurping the Kami's sovereignity. Amidst the chaos, Asuka fell, despite the enactment of <span class="altcolor">Hakuhatsu Ki</span>'s plan.
   <br><br>
   <span class="title">Thus came the twin Bearers of the world's destiny.</span>
   The underworld was cleared out, the wars called to a halt, and the twelve blades broken and locked. In the
@@ -345,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
       her—but even as her world's colours faded to a monochrome, she would ensure to show it the <b>red of her undying
           will.</b>
       In a final gambit—she wielded her blade against the Aeon, attempting to cut down the concept of
-      Nihility—non-existence itself. Thus did Raiden Mei sink into the <b>Shadow of IX...</b>`,
+      Nihility—non-existence itself. Thus did Raiden Mei sink into the <span class="meicolor more-info" data-info="A Shadow of IX or Shadow of Nihility is an unintended creation of IX, the Aeon of Nihility, that exists in many forms across the universe."><b>Shadow of IX...</b></span>`,
       },
     }
   
