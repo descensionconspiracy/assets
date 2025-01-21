@@ -46,6 +46,7 @@ body strong {
 
 .title {
     background-color: var(--alt-color);
+    text-transform: uppercase;
 }
 
 /* Background styling */
@@ -105,6 +106,7 @@ body strong {
 .character-image {
     flex: 0 0 auto;
     width: 244.5px;
+    height: 410px;
     overflow: hidden;
     border: #4A4543 1px solid;
 }
@@ -426,8 +428,8 @@ body strong {
     position: relative;
     display: inline-block;
     cursor: help;
-    color: var(--sub-color);
     border-bottom: 1px dotted var(--sub-color);
+    overflow: visible;
 }
 
 .spoiler.more-info{ 
@@ -447,7 +449,7 @@ body strong {
     content: "";
 }
 
-.more-info .popup {
+.popup {
     visibility: hidden;
     position: absolute;
     bottom: 125%;
@@ -458,7 +460,7 @@ body strong {
     text-align: center;
     padding: 0.5rem;
     border-radius: 4px;
-    z-index: 1;
+    z-index: 9999;
     width: 200px;
     font-size: 0.9em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -471,6 +473,16 @@ body strong {
 .spoiler.revealed.more-info:hover .popup {
     visibility: visible;
     opacity: 1;
+}
+
+.more-info.acolor:hover {
+    color: var(--main-color);
+    transition: color 0.3s;
+}
+
+.more-info.meicolor:hover {
+    color: var(--sub-color);
+    transition: color 0.3s;
 }
 
 .spoiler.more-info:hover .popup {
