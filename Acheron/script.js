@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           class="acolor">ACHERON.</span><br>
                       <b>HEIGHT</b> 178 cm, 5'10"<br>
                       <b>WEIGHT</b> 72 kg, 158lbs<br>
-                      <b>AGE</b> <span class="spoiler">Several millenia, appears to be</span> in her late twenties<br>
+                      <b>AGE</b> <span class="spoiler">At least a few centuries, appears to be</span> in her late twenties<br>
                       <b>EPITHET</b> <span class="acolor">The Almighty Thunder</span> (past), <span class="meicolor more-info" data-info="They are beings with power directly granted by the Aeons, 
                       incomparably more powerful than mere mortals. Acheron presides over the concept of <b>NIHILITY</b>, or nothingness—and in her particular arrangement, can draw
                       power almost infinitely from this deity-like existence.">Emanator of Nihility</span> <br>
