@@ -297,7 +297,7 @@ battles fought only in memory.
 From a young age, Mei excelled in her training, coming to wield the Edict Edge <span class="more-info"
     data-info="The Almighty Thunder: It could summon lightning to tear the sky, and the soaring meteors and thunder dealt divine justice.">Howl.</span>
 Her mastery of its divine mantra set her apart, earning her admiration and fear among her peers.
-But her most significant bond was with a young, white-haired woman: Asuka, a fellow sentinel,
+But her most significant bond was with a young, white-haired woman: Kiana, a fellow sentinel,
 who saw beyond Mei’s stoic exterior and reminded her of the warmth she often denied herself.
 Together, they dreamed of a brighter future, even as the world they fought for grew darker.
 <br><br>
@@ -318,11 +318,11 @@ whose brilliance and charisma drew countless followers to his vision.
 Mei and <span class="altcolor">Hakuhatsu Ki</span>’s ideologies clashed, their debates growing colder as the world around them spiraled toward
 collapse.
 Takamagahara’s shadow deepened, and strange miasmas began to seep into Izumo’s skies.<br><br>
-It was only when her best friend, Asuka, had her life threatened,
-that Mei finally did give in to <span class="altcolor">Hakuhatsu Ki</span>'s ideology, much to Asuka's own chagrin. It was, after all, the only
+It was only when her best friend, Kiana, had her life threatened,
+that Mei finally did give in to <span class="altcolor">Hakuhatsu Ki</span>'s ideology, much to Kiana's own chagrin. It was, after all, the only
 way to save her. But cities vanished into the void, their lights extinguished by an insatiable darkness: such was the
 price
-for usurping the Kami's sovereignity. Amidst the chaos, Asuka fell, despite the enactment of <span class="altcolor">Hakuhatsu Ki</span>'s plan.
+for usurping the Kami's sovereignity. Amidst the chaos, Kiana fell, despite the enactment of <span class="altcolor">Hakuhatsu Ki</span>'s plan.
 <br><br>
 <span class="title">Thus came the twin Bearers of the world's destiny.</span>
 The underworld was cleared out, the wars called to a halt, and the twelve blades broken and locked. In the
@@ -349,7 +349,7 @@ Mei gripped the hilt of Origin, standing her ground. Shedding a crimson tear, he
 <span class="title">"If I must be the last light of this world, then so be it—I will shine until the end."</span>
     It was a battle she could not win, yet she fought on, even as the miasma coiled tighter around her soul, and the
     corrupted amalgamations of Nihility encroached on her.
-    With each step, she lost something—memories of Asuka’s smile, the warmth of her family and friends, even the
+    With each step, she lost something—memories of Kiana’s smile, the warmth of her family and friends, even the
     sound of her own name.<br><br>
     As Izumo crumbled into non-existence, Mei’s defiance burned brighter. The Aeon of Nihility took everything from
     her—but even as her world's colours faded to a monochrome, she would ensure to show it the <b>red of her undying
