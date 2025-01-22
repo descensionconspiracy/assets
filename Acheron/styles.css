@@ -450,8 +450,6 @@ body strong {
 .popup {
   visibility: hidden;
   position: absolute;
-  bottom: 125%;
-  left: 50%;
   transform: translateX(-50%);
   background-color: rgba(15, 15, 15, 0.95);
   color: #fff;

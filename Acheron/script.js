@@ -379,7 +379,7 @@ Mei gripped the hilt of Origin, standing her ground. Shedding a crimson tear, he
       element.addEventListener("mouseenter", (e) => {
         const rect = element.getBoundingClientRect()
         popup.style.left = `${rect.left + rect.width / 2}px`
-        popup.style.bottom = `${window.innerHeight - rect.top}px`
+        popup.style.top = `${rect.top + 20}px`
         popup.style.visibility = "visible"
         popup.style.opacity = 1
       })
