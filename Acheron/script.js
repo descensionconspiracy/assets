@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "self-annihilator": {
       buttonText: "EMANATOR OF NIHILITY",
       bio: `<b>NAME</b> <span class="spoiler gradient-text">Raiden Bosenmori Mei</span>, known as <span
-                        class="acolor">ACHERON.</span><br>
+                        class="acolor more-info" data-info="<b>WATCHER OF THE ACHERON RIVER.</b>">ACHERON.</span><br>
                     <b>HEIGHT</b> 178 cm, 5'10"<br>
                     <b>WEIGHT</b> 72 kg, 158lbs<br>
                     <b>AGE</b> <span class="spoiler">At least a few centuries, appears to be</span> in her late twenties<br>
@@ -236,7 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     devastated by <span class="meicolor">NIHILITY</span>, the self-proclaimed <span class="acolor">Galaxy
                         Ranger</span> aimlessly traverses the cosmos without
                     a planet to call home,
-                    casting the <span class="meicolor">Shadow of IX</span> wherever she steps upon.
+                    casting the <span class="meicolor more-info" data-info="A Shadow of IX or Shadow of Nihility is an unintended creation of IX, the Aeon of Nihility, 
+                    that exists in many forms across the universe.">Shadow of IX.</span> wherever she steps upon.
                     <br><br>
                     <span class="title">EVEN FACING A BLACK HOLE––WE STILL HAVE A <b>CHOICE</b>.</span> But
                     though
