@@ -85,7 +85,7 @@
                 <div class="tab-content" id="characteristics">
                     <span class="title more-info" data-info="<span class='title'>ACHERON</span> is <i>overpowered</i>—this much is obvious to me, and
                     therefore, scenarios explored with her will ensure she is nerfed and cannot use her full abilities due to circumstance, 
-                    be it a situation that cannot be bruteforced out of. These are simply details on her
+                    be it a situation that cannot be bruteforced out of, or even an AU. These are simply details on her
                     from what's been implied or stated in canon, for purposes of combat roleplay; and even then, I don't
                     plan on having her unsheathe her sword under any circumstances.">Disclaimer</span>.<br><br>
 
@@ -159,61 +159,62 @@
             <button id="stopMusic">Yes</button>
             <button id="continueMusic">No</button>
         </div>
-        <div class="custom-player">
-            <div class="player-info">
-                <span class="song-title">DEATH CONTRACT</span>
-                <span class="time-display">
-                    <span id="currentTime">0:00</span>
-            </div>
+        <div class="custom-player collapsed">
+  <div class="player-header">
+    <span class="song-title">DEATH CONTRACT</span>
+    <div class="player-info">
+        <span class="time-display">
+          <span id="currentTime">0:00</span>
+        </span>
+        <button class="expand-toggle">▲</button>
+      </div>
+  </div>
+  <div class="player-content">
 
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
-            </div>
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
 
-            <div class="controls">
-                <button class="play-pause">
-                    <svg class="play-icon" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                    </svg>
-                    <svg class="pause-icon" viewBox="0 0 24 24">
-                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                    </svg>
-                </button>
-                <div class="volume-control">
-                    <button class="volume-button">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
-                        </svg>
-                    </button>
-                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
-                </div>
-            </div>
+    <div class="controls">
+      <button class="play-pause">
+        <svg class="play-icon" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+        <svg class="pause-icon" viewBox="0 0 24 24">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+        </svg>
+      </button>
+      <div class="volume-control">
+        <button class="volume-button">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+          </svg>
+        </button>
+        <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
 
-            <div class="tracklist">
-                <div class="track-item active"
-                    data-src="https://github.com/descensionconspiracy/assets/raw/refs/heads/main/pitter-patter.mp3">
-                    <span class="track-number">01</span>
-                    <span class="track-name">DEATH CONTRACT</span>
-                </div>
-                <div class="track-item"
-                    data-src="https://github.com/descensionconspiracy/assets/raw/refs/heads/main/acheron.mp3">
-                    <span class="track-number">02</span>
-                    <span class="track-name">YOUR COLOUR</span>
-                </div>
-            </div>
+    <div class="tracklist">
+      <div class="track-item active" data-src="https://github.com/descensionconspiracy/assets/raw/refs/heads/main/pitter-patter.mp3">
+        <span class="track-number">01</span>
+        <span class="track-name">DEATH CONTRACT</span>
+      </div>
+      <div class="track-item" data-src="https://github.com/descensionconspiracy/assets/raw/refs/heads/main/acheron.mp3">
+        <span class="track-number">02</span>
+        <span class="track-name">YOUR COLOUR</span>
+      </div>
+    </div>
+  </div>
 
-            <audio id="audioPlayer" autoplay>
-                <source src="https://github.com/descensionconspiracy/assets/raw/refs/heads/main/pitter-patter.mp3"
-                    type="audio/mp3">
-            </audio>
-        </div>
+  <audio id="audioPlayer" autoplay>
+    <source src="https://github.com/descensionconspiracy/assets/raw/refs/heads/main/pitter-patter.mp3" type="audio/mp3">
+  </audio>
+</div>
     </div>
 
     <script src="script.js"></script>
 </body>
 
 </html>
-
