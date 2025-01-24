@@ -411,4 +411,38 @@ Mei gripped the hilt of Origin, standing her ground. Shedding a crimson tear, he
       tabs.classList.remove("show")
     }
   })
+
+  // Collapsible player functionality
+  const customPlayer = document.querySelector(".custom-player")
+  const playerHeader = document.querySelector(".player-header")
+  const expandToggle = document.querySelector(".expand-toggle")
+
+  function togglePlayerExpansion() {
+    customPlayer.classList.toggle("expanded")
+    customPlayer.classList.toggle("collapsed")
+  }
+
+  playerHeader.addEventListener("click", togglePlayerExpansion)
+  expandToggle.addEventListener("click", (e) => {
+    e.stopPropagation()
+    togglePlayerExpansion()
+  })
+
+  // Update progress bar position for collapsed state
+  function updateProgressPosition() {
+    if (window.innerWidth < 768 && customPlayer.classList.contains("collapsed")) {
+      const percentage = (audioPlayer.currentTime / audioPlayer.duration) * 100
+      progress.style.width = `${percentage}%`
+    }
+  }
+
+  audioPlayer.addEventListener("timeupdate", updateProgressPosition)
+
+  // Handle click on progress bar in collapsed state
+  progressContainer.addEventListener("click", (e) => {
+    const clickPosition = e.offsetX / progressContainer.offsetWidth
+    audioPlayer.currentTime = clickPosition * audioPlayer.duration
+    updateProgress()
+  })
 })
+
