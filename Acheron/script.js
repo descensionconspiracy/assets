@@ -444,5 +444,10 @@ Mei gripped the hilt of Origin, standing her ground. Shedding a crimson tear, he
     audioPlayer.currentTime = clickPosition * audioPlayer.duration
     updateProgress()
   })
+
+  if (window.innerWidth > 768) {
+    customPlayer.classList.add("expanded")
+    customPlayer.classList.remove("collapsed")
+  }
 })
 

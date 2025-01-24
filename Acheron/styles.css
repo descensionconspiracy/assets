@@ -225,6 +225,7 @@ body strong {
   width: 100%;
   max-width: 720px;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .player-info {
@@ -639,7 +640,7 @@ body strong {
 .custom-player.expanded {
   height: auto;
   max-height: 80vh;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .player-header {
