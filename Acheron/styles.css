@@ -167,7 +167,6 @@ body strong {
   display: none;
   min-height: min(500px, 30vh);
   max-height: 50vh;
-  overflow-y: auto;
 }
 
 .tab-content.active {
