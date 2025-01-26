@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Update the togglePlayPause function
   function togglePlayPause() {
     if (audioPlayer.paused) {
-      audioPrompt.play()
+      audioPlayer.play()
     } else {
       audioPlayer.pause()
     }
