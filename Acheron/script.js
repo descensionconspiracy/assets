@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const characterImage = document.getElementById("characterImage")
   const images = {
-    default: "https://cdn.imgchest.com/files/46acqqmeaz7.gif",
-    spoiler: "https://cdn.imgchest.com/files/4z9cvev2k27.gif",
+    default: "https://cdn.imgchest.com/files/49zc2aml5wy.png",
+    spoiler: "https://cdn.imgchest.com/files/7ogcblgz9ky.png",
   }
 
   // Spoiler Management
