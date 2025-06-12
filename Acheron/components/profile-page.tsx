@@ -233,7 +233,16 @@ export default function ProfilePage({ onBack }: ProfilePageProps) {
 
                       <p>
                         <span className="title">She is a river of sorrow carrying the debris of a dead world.</span>{" "}
-                        When she meets those who see echoes of other women in her face—a genius Doctor, a valiant warrior, a God of Lightning—she offers no correction. 
+                        When she meets those who see echoes of other women in her face—
+                        <MoreInfo className="acolor" info="<img src='https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/19/Dr._MEI_%28Profile%29.jpg'>">
+                          a genius Doctor,
+                        </MoreInfo>{" "}
+                        <MoreInfo className="acolor" info="<img src='https://i.pinimg.com/736x/4b/fa/79/4bfa7920257bc4a13a439fef78f7d7c8.jpg'>">
+                          a valiant warrior,
+                        </MoreInfo>{" "}
+                        <MoreInfo className="acolor" info="<img src='https://pbs.twimg.com/media/Fpbl9o1aIAAOqB-.jpg'>">
+                          or even a God of Lightning
+                        </MoreInfo>{"—"}she offers no correction. 
                         Their memories are not hers to claim. They are seeing ghosts of possibilities, alternate paths from alternate struggles. It has nothing to do with her.
                       </p>
 

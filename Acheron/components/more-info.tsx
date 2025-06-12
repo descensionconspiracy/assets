@@ -23,9 +23,9 @@ export default function MoreInfo({ children, info, className = "" }: MoreInfoPro
     const viewportWidth = window.innerWidth
     const viewportHeight = window.innerHeight
     const popupWidth = 250
-    const popupHeight = 100 // Estimated height
+    const popupHeight = viewportHeight > 150 ? viewportHeight * 0.3 : 100 // Estimated height
 
-    let top = rect.top - popupHeight - 10
+    let top = rect.top - viewportHeight * 1.3 - 10
     let left = rect.left + rect.width / 2
 
     // Adjust horizontal position if popup would go off screen
