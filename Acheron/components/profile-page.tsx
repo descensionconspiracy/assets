@@ -374,7 +374,9 @@ export default function ProfilePage({ onBack }: ProfilePageProps) {
                             <MoreInfo info="The Horizon of Existence, also known as the Border of Nihility, is a phenomenon that marks the boundary between existence and nihility, that is, nothingness, the state of non-existence.">
                               Horizon of Existence
                             </MoreInfo>
-                            , leading people from the nothingness of <span className="meicolor">NIHILITY</span>, the
+                            , leading the <MoreInfo info="Sin Thirsters are, essentially, lost souls who, in the River of Woe, reenact the obsessions of their lives aimlessly, under the illusion that they can control their fate.">
+                              Sin Thirsters
+                            </MoreInfo> from the nothingness of <span className="meicolor">NIHILITY</span>, the
                             very same which once consumed her, so that none may suffer what she once did.
                           </p>
 
