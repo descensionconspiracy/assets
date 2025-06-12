@@ -177,7 +177,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
         </div>
 
         {/* Enter Button */}
-        <div className="mb-16">
+        <div className="">
           <Button
             onClick={onEnter}
             className="relative bg-transparent border-2 border-[#b21919] text-white hover:bg-[#b21919]/20 hover:border-[#7c5cff] hover:text-white transition-all duration-500 px-12 py-4 text-lg font-semibold tracking-wider group overflow-hidden font-['D-DIN'] hover:scale-105"
@@ -192,6 +192,54 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
               </span>
             </span>
           </Button>
+        </div>
+
+        <div className="max-w-3xl text-center relative">
+          {/* Quote container with enhanced animations */}
+          <div className="relative min-h-[140px] flex items-center justify-center">
+            {/* Background glow effect that changes with quotes */}
+            <div
+              className={`absolute inset-0 rounded-lg blur-3xl opacity-10 transition-all duration-1000 ${
+                textPhase === 0 ? "bg-[#7c5cff]" : textPhase === 1 ? "bg-[#b21919]" : "bg-[#e1af8e]"
+              }`}
+            />
+
+            {/* Main quote text with complex animations */}
+            <div
+              className={`text-gray-300 italic leading-relaxed text-base md:text-lg font-['D-DIN'] relative z-10 transition-all duration-700 transform ${
+                // isTransitioning
+                //   ? "opacity-0 scale-95 blur-sm translate-y-4"
+                //   : "opacity-100 scale-100 blur-0 translate-y-0"
+              ""}`}
+              // style={{
+              //   textShadow: `0 0 20px ${textPhase === 0 ? "#7c5cff40" : textPhase === 1 ? "#b2191940" : "#e1af8e40"}`,
+              // }}
+            >
+              {/* {currentQuote.text} */}
+              <a className="meicolor group-hover:text-[#b21919] transition-all duration-500 hover:opacity-80" 
+              href="https://www.aniroleplay.com/status_stream.php?member_id=638522">Or cross the stream of the Acheron River.</a>
+            </div>
+
+            {/* Floating accent elements */}
+            <div
+              className={`absolute inset-0 pointer-events-none transition-opacity duration-1000 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
+            >
+              {[...Array(5)].map((_, i) => (
+                <div
+                  key={`${textPhase}-${i}`}
+                  className={`absolute w-1 h-1 rounded-full animate-pulse ${
+                    textPhase === 0 ? "bg-[#7c5cff]" : textPhase === 1 ? "bg-[#b21919]" : "bg-[#e1af8e]"
+                  }`}
+                  style={{
+                    left: `${20 + Math.random() * 60}%`,
+                    top: `${20 + Math.random() * 60}%`,
+                    animationDelay: `${i * 0.3}s`,
+                    animationDuration: `${2 + Math.random() * 2}s`,
+                  }}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
