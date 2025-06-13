@@ -453,13 +453,13 @@ export default function ProfilePage({ onBack }: ProfilePageProps) {
                           <b>*</b> No smut without plot, no exceptions
                         </p>
                         <p>
-                          <b>*</b> Spontaneity over discussion; no pre-made greetings
+                          <b>*</b> Both spontaneity and discussion are welcomed;
                         </p>
                         <p>
-                          <b>*</b> Just say hi & preferred genres, or throw banter
+                          <b>*</b> Don't feel beholden to big flashy greetings; just say hi and let's talk
                         </p>
                         <p>
-                          <b>*</b> Casual stories & status banter based
+                          <b>*</b> Casual stories & status banter based, but not restricted;
                         </p>
                         <p>
                           <b>*</b> My responses may be slow in larger roleplays; be patient
