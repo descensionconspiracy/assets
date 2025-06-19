@@ -5,82 +5,15 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 interface IntroScreenProps {
-  onEnter: () => void
+  onEnter: (verse: "shadow" | "ghost") => void
 }
 
 export default function IntroScreen({ onEnter }: IntroScreenProps) {
   const [loaded, setLoaded] = useState(false)
-  const [textPhase, setTextPhase] = useState(0)
-  const [isTransitioning, setIsTransitioning] = useState(false)
 
   useEffect(() => {
     setLoaded(true)
-
-    // Cycle through different text phases for dramatic effect
-    const interval = setInterval(() => {
-      setIsTransitioning(true)
-
-      setTimeout(() => {
-        setTextPhase((prev) => (prev + 1) % 3)
-        setIsTransitioning(false)
-      }, 500) // Half second for transition out, then transition in
-    }, 4000)
-
-    return () => clearInterval(interval)
   }, [])
-
-  const renderQuote = () => {
-    const quotes = [
-      {
-        text: (
-          <>
-            "But please believe me that in that{" "}
-            <span className="text-gray-400 transition-colors duration-300">monochrome world</span>,
-            <br />
-            there will be a glimpse of{" "}
-            <span className="text-[#b21919] transition-colors duration-300">fleeting red</span>,
-            <br />
-            and when you make a choice... there will be a chance
-            <br />
-            to <span className="text-[#7c5cff] transition-colors duration-300">fulfill that promise</span>."
-          </>
-        ),
-        accent: "promise",
-      },
-      {
-        text: (
-          <>
-            "I wish to <span className="text-[#7c5cff] transition-colors duration-300">mourn the departed</span>,
-            <br />
-            weeping like rain, to swell the crossing stream...
-            <br />
-            For in the <span className="text-gray-400 transition-colors duration-300">shadow of IX</span>,
-            <br />
-            even <span className="text-[#b21919] transition-colors duration-300">nothingness</span> has meaning."
-          </>
-        ),
-        accent: "meaning",
-      },
-      {
-        text: (
-          <>
-            "And because of this, the <span className="text-[#b21919] transition-colors duration-300">'end'</span>
-            <br />
-            will thus reveal a completely different meaning.
-            <br />
-            In defiance of <span className="text-gray-400 transition-colors duration-300">nihility</span>,
-            <br />
-            we choose to <span className="text-[#7c5cff] transition-colors duration-300">exist</span>."
-          </>
-        ),
-        accent: "exist",
-      },
-    ]
-
-    return quotes[textPhase]
-  }
-
-  const currentQuote = renderQuote()
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-white relative overflow-hidden font-['D-DIN']">
@@ -176,68 +109,40 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
           </div>
         </div>
 
-        {/* Enter Button */}
-        <div className="">
+        {/* Verse Selection Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <Button
-            onClick={onEnter}
-            className="relative bg-transparent border-2 border-[#b21919] text-white hover:bg-[#b21919]/20 hover:border-[#7c5cff] hover:text-white transition-all duration-500 px-12 py-4 text-lg font-semibold tracking-wider group overflow-hidden font-['D-DIN'] hover:scale-105"
+            onClick={() => onEnter("shadow")}
+            className="relative bg-transparent border-2 border-[#b21919] text-white hover:bg-[#b21919]/20 hover:border-[#7c5cff] hover:text-white transition-all duration-500 px-8 py-4 text-base font-semibold tracking-wider group overflow-hidden font-['D-DIN'] hover:scale-105"
           >
             {/* Enhanced button background effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#b21919]/0 via-[#b21919]/10 to-[#b21919]/0 group-hover:via-[#7c5cff]/20 transition-all duration-500" />
             <div className="absolute inset-0 bg-gradient-to-l from-[#7c5cff]/0 via-transparent to-[#7c5cff]/0 group-hover:via-[#b21919]/10 transition-all duration-700" />
 
-            <span className="relative z-10 flex items-center">
-              STEP INTO THE SHADOW OF IX
-              <span className="ml-3 group-hover:translate-x-2 transition-transform duration-300 text-[#7c5cff] group-hover:text-[#b21919]">
-              </span>
-            </span>
+            <span className="relative z-10 flex items-center">HIGH FANTASY/HOYOVERSE</span>
+          </Button>
+
+          <Button
+            onClick={() => onEnter("ghost")}
+            className="relative bg-transparent border-2 border-[#7c5cff] text-white hover:bg-[#7c5cff]/20 hover:border-[#b21919] hover:text-white transition-all duration-500 px-8 py-4 text-base font-semibold tracking-wider group overflow-hidden font-['D-DIN'] hover:scale-105"
+          >
+            {/* Enhanced button background effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#7c5cff]/0 via-[#7c5cff]/10 to-[#7c5cff]/0 group-hover:via-[#b21919]/20 transition-all duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-l from-[#b21919]/0 via-transparent to-[#b21919]/0 group-hover:via-[#7c5cff]/10 transition-all duration-700" />
+
+            <span className="relative z-10 flex items-center">LOW FANTASY/SPN/URBAN</span>
           </Button>
         </div>
 
         <div className="max-w-3xl text-center relative">
-          {/* Quote container with enhanced animations */}
-          <div className="relative min-h-[140px] flex items-center justify-center">
-            {/* Background glow effect that changes with quotes */}
-            <div
-              className={`absolute inset-0 rounded-lg blur-3xl opacity-10 transition-all duration-1000 ${
-                textPhase === 0 ? "bg-[#7c5cff]" : textPhase === 1 ? "bg-[#b21919]" : "bg-[#e1af8e]"
-              }`}
-            />
-
-            {/* Main quote text with complex animations */}
-            <div
-              className={`text-gray-300 italic leading-relaxed text-base md:text-lg font-['D-DIN'] relative z-10 transition-all duration-700 transform ${
-                // isTransitioning
-                //   ? "opacity-0 scale-95 blur-sm translate-y-4"
-                //   : "opacity-100 scale-100 blur-0 translate-y-0"
-              ""}`}
-              // style={{
-              //   textShadow: `0 0 20px ${textPhase === 0 ? "#7c5cff40" : textPhase === 1 ? "#b2191940" : "#e1af8e40"}`,
-              // }}
-            >
-              {/* {currentQuote.text} */}
-              <a className="meicolor group-hover:text-[#b21919] transition-all duration-500 hover:opacity-80" 
-              href="https://www.aniroleplay.com/status_stream.php?member_id=638522">Or cross the stream of the Acheron River.</a>
-            </div>
-
-            {/* Floating accent elements */}
-            <div
-              className={`absolute inset-0 pointer-events-none transition-opacity duration-1000 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
-            >
-              {[...Array(5)].map((_, i) => (
-                <div
-                  key={`${textPhase}-${i}`}
-                  className={`absolute w-1 h-1 rounded-full animate-pulse ${
-                    textPhase === 0 ? "bg-[#7c5cff]" : textPhase === 1 ? "bg-[#b21919]" : "bg-[#e1af8e]"
-                  }`}
-                  style={{
-                    left: `${20 + Math.random() * 60}%`,
-                    top: `${20 + Math.random() * 60}%`,
-                    animationDelay: `${i * 0.3}s`,
-                    animationDuration: `${2 + Math.random() * 2}s`,
-                  }}
-                />
-              ))}
+          <div className="relative min-h-[60px] flex items-center justify-center">
+            <div className="text-gray-300 italic leading-relaxed text-base md:text-lg font-['D-DIN'] relative z-10">
+              <a
+                className="meicolor group-hover:text-[#b21919] transition-all duration-500 hover:opacity-80"
+                href="https://www.aniroleplay.com/status_stream.php?member_id=638522"
+              >
+                Or cross the stream of the Acheron River.
+              </a>
             </div>
           </div>
         </div>

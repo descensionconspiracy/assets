@@ -5,11 +5,21 @@ import IntroScreen from "@/components/intro-screen"
 import ProfilePage from "@/components/profile-page"
 
 export default function Home() {
-  const [showProfile, setShowProfile] = useState(false)
+  const [currentView, setCurrentView] = useState<"intro" | "profile">("intro")
+  const [selectedVerse, setSelectedVerse] = useState<"shadow" | "ghost">("shadow")
 
-  if (showProfile) {
-    return <ProfilePage onBack={() => setShowProfile(false)} />
+  const handleEnterVerse = (verse: "shadow" | "ghost") => {
+    setSelectedVerse(verse)
+    setCurrentView("profile")
   }
 
-  return <IntroScreen onEnter={() => setShowProfile(true)} />
+  const handleBackToIntro = () => {
+    setCurrentView("intro")
+  }
+
+  if (currentView === "profile") {
+    return <ProfilePage onBack={handleBackToIntro} verse={selectedVerse} />
+  }
+
+  return <IntroScreen onEnter={handleEnterVerse} />
 }
