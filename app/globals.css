@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'D-DIN';
+    font-style: normal;
+    font-weight: 400;
+    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN.woff') format('woff');
+}
+@font-face {
+    font-family: 'D-DIN';
+    font-style: italic;
+    font-weight: 400;
+    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'D-DIN';
+    font-style: normal;
+    font-weight: 700;
+    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'D-DIN Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local('D-DIN Condensed'), url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed.woff') format('woff');
+}
+@font-face {
+    font-family: 'D-DIN Exp';
+    font-style: normal;
+    font-weight: 400;
+    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp.woff') format('woff');
+}
+@font-face {
+    font-family: 'D-DIN Exp';
+    font-style: italic;
+    font-weight: 400;
+    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'D-DIN Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: local('D-DIN Condensed'), url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'D-DIN Exp';
+    font-style: normal;
+    font-weight: 700;
+    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp-Bold.woff') format('woff');
+}
+
+:root {
+  --main-color: #b21919;
+  --sub-color: #7c5cff;
+  --alt-color: #7c5cff;
+  --accent-color: #e1af8e;
+  --gradient-start: #6b3ab6;
+  --gradient-mid: #d6c9d3;
+  --gradient-end: #b10000;
+  --background: #0f0f0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "D-DIN", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: white;
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: "D-DIN", sans-serif;
+}
+
+body b,
+body strong {
+  color: var(--main-color);
+}
+
+/* Ensure D-DIN font is used everywhere */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+button,
+input,
+textarea,
+select {
+  font-family: "D-DIN", sans-serif;
+}
+
+/* Custom color classes */
+.acolor {
+  color: var(--sub-color);
+}
+
+.meicolor {
+  color: var(--main-color);
+}
+
+.altcolor {
+  color: var(--accent-color);
+}
+
+.title {
+  background-color: var(--alt-color);
+  text-transform: uppercase;
+  padding: 0.25rem 0.1rem 0.5rem 0.1rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: white;
+  font-family: "D-DIN", sans-serif;
+}
+
+/* Spoiler styles */
+.spoiler {
+  background-color: var(--main-color);
+  color: transparent;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.spoiler.revealed {
+  background-color: transparent;
+  color: inherit;
+}
+
+.spoiler.revealed.gradient-text {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.spoiler.revealed.meicolor {
+  color: var(--main-color);
+}
+
+.spoiler.revealed.acolor {
+  color: var(--sub-color);
+}
+
+.spoiler.revealed.altcolor {
+  color: var(--accent-color);
+}
+
+/* More Info Styles */
+.more-info {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dotted var(--sub-color);
+  overflow: visible;
+  font-family: "D-DIN", sans-serif;
+}
+
+.more-info.acolor {
+  border-bottom-color: var(--sub-color);
+}
+
+.more-info.meicolor {
+  border-bottom-color: var(--main-color);
+}
+
+.more-info.altcolor {
+  border-bottom-color: var(--accent-color);
+}
+
+.more-info.title {
+  border-bottom-color: var(--alt-color);
+}
+
+.more-info:hover {
+  transition: color 0.3s;
+}
+
+.more-info.acolor:hover {
+  color: var(--main-color);
+}
+
+.more-info.meicolor:hover {
+  color: var(--sub-color);
+}
+
+.more-info.altcolor:hover {
+  color: var(--main-color);
+}
+
+.popup {
+  visibility: hidden;
+  position: fixed;
+  background-color: rgba(15, 15, 15, 0.95);
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  z-index: 9999;
+  max-width: 250px;
+  min-width: 200px;
+  font-size: 0.85em;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--sub-color);
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  word-wrap: break-word;
+  font-family: "D-DIN", sans-serif;
+}
+
+.popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(15, 15, 15, 0.95) transparent transparent transparent;
+}
+
+.popup.bottom::after {
+  top: -12px;
+  border-color: transparent transparent rgba(15, 15, 15, 0.95) transparent;
+}
+
+/* Ensure popups work on mobile */
+@media (max-width: 768px) {
+  .popup {
+    max-width: 200px;
+    font-size: 0.8em;
+    padding: 0.5rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sub-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sub-color) var(--background);
+}
+
+/* Progress bar styles */
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.progress {
+  position: absolute;
+  height: 100%;
+  background: var(--main-color);
+  width: 0;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Ensure all shadcn components use D-DIN font */
+.ui-button,
+.ui-tabs,
+.ui-card {
+  font-family: "D-DIN", sans-serif;
+}
