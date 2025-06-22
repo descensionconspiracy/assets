@@ -41,7 +41,7 @@ export default function ProfilePage({ onBack, verse }: ProfilePageProps) {
 
   // Get verse-specific title
   const getVerseTitle = () => {
-    return verse === "shadow" ? "Shadow of IX (High Fantasy)" : "Vampire: The Masquerade (Low Fantasy/Supernatural/Urban)"
+    return verse === "shadow" ? "Shadow of IX" : "Vampire: The Masquerade (Low Fantasy/Supernatural/Urban)"
   }
 
   // Get verse-specific content

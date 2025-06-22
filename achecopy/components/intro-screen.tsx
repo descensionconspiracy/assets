@@ -119,7 +119,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
             <div className="absolute inset-0 bg-gradient-to-r from-[#b21919]/0 via-[#b21919]/10 to-[#b21919]/0 group-hover:via-[#7c5cff]/20 transition-all duration-500" />
             <div className="absolute inset-0 bg-gradient-to-l from-[#7c5cff]/0 via-transparent to-[#7c5cff]/0 group-hover:via-[#b21919]/10 transition-all duration-700" />
 
-            <span className="relative z-10 flex items-center">HIGH FANTASY/HOYOVERSE</span>
+            <span className="relative z-10 flex items-center">STEP INTO THE SHADOW OF IX.</span>
           </Button>
         </div>
       </div>
