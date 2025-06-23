@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useState, useRef, useEffect } from "react"
+import type React from "react"
+import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Volume2, ChevronUp, ChevronDown } from "lucide-react"
 
@@ -25,7 +26,7 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
-  const [volume, setVolume] = useState(1)
+  const [volume, setVolume] = useState(0.5)
   const [currentTrack, setCurrentTrack] = useState(0)
   const [isExpanded, setIsExpanded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -56,8 +57,8 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
     }
 
     const onEnded = () => {
-      const next = (currentTrack + 1) % tracks.length
-      setCurrentTrack(next)
+      audio.currentTime = 0
+      audio.play().catch(() => {})
     }
 
     const onPlay = () => setIsPlaying(true)
@@ -111,7 +112,7 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
   }
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setVolume(parseFloat(e.target.value))
+    setVolume(Number.parseFloat(e.target.value))
   }
 
   const playTrack = (index: number) => {
@@ -135,13 +136,26 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
   }
 
   return (
-    <div className={`bg-black/95 border border-[#b21919] max-w-3xl mx-auto transition-all duration-300 ${isMobile && !isExpanded ? "pb-0" : ""}`}>
-      <div className={`flex items-center justify-between p-4 ${isMobile ? "cursor-pointer" : ""}`} onClick={toggleExpanded}>
+    <div
+      className={`bg-black/95 border border-[#b21919] max-w-3xl mx-auto transition-all duration-300 ${isMobile && !isExpanded ? "pb-0" : ""}`}
+    >
+      <div
+        className={`flex items-center justify-between p-4 ${isMobile ? "cursor-pointer" : ""}`}
+        onClick={toggleExpanded}
+      >
         <span className="font-semibold font-['D-DIN']">{tracks[currentTrack].name}</span>
         <div className="flex items-center gap-4">
           <span className="text-sm text-gray-400 font-['D-DIN']">{formatTime(currentTime)}</span>
           {isMobile && (
-            <Button variant="ghost" size="sm" className="text-white" onClick={(e) => { e.stopPropagation(); toggleExpanded() }}>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-white"
+              onClick={(e) => {
+                e.stopPropagation()
+                toggleExpanded()
+              }}
+            >
               {isExpanded ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
             </Button>
           )}
@@ -158,7 +172,10 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
 
       <div className={`${isExpanded || !isMobile ? "block" : "hidden"} p-4 pt-0`}>
         <div className="flex items-center justify-between mb-4">
-          <button onClick={togglePlay} className="w-10 h-10 rounded-full bg-[#b21919] hover:bg-[#7c5cff] flex items-center justify-center">
+          <button
+            onClick={togglePlay}
+            className="w-10 h-10 rounded-full bg-[#b21919] hover:bg-[#7c5cff] flex items-center justify-center"
+          >
             <svg viewBox="0 0 24 24" className="w-5 h-5" style={{ marginLeft: isPlaying ? 0 : 1 }}>
               {isPlaying ? (
                 <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="currentColor" />
@@ -177,7 +194,9 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
               value={volume}
               onChange={handleVolumeChange}
               className="w-24 h-1"
-              style={{ background: `linear-gradient(to right, #7c5cff 0%, #7c5cff ${volume * 100}%, rgba(255,255,255,0.1) ${volume * 100}%, rgba(255,255,255,0.1) 100%)` }}
+              style={{
+                background: `linear-gradient(to right, #7c5cff 0%, #7c5cff ${volume * 100}%, rgba(255,255,255,0.1) ${volume * 100}%, rgba(255,255,255,0.1) 100%)`,
+              }}
             />
           </div>
         </div>
