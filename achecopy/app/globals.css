@@ -3,52 +3,59 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'D-DIN';
-    font-style: normal;
-    font-weight: 400;
-    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN.woff') format('woff');
+  font-family: 'D-DIN';
+  font-style: normal;
+  font-weight: 400;
+  src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'D-DIN';
-    font-style: italic;
-    font-weight: 400;
-    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN-Italic.woff') format('woff');
+  font-family: 'D-DIN';
+  font-style: italic;
+  font-weight: 400;
+  src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN-Italic.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'D-DIN';
-    font-style: normal;
-    font-weight: 700;
-    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN-Bold.woff') format('woff');
+  font-family: 'D-DIN';
+  font-style: normal;
+  font-weight: 700;
+  src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN-Bold.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'D-DIN Condensed';
-    font-style: normal;
-    font-weight: 400;
-    src: local('D-DIN Condensed'), url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed.woff') format('woff');
+  font-family: 'D-DIN Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('D-DIN Condensed'), url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'D-DIN Exp';
-    font-style: normal;
-    font-weight: 400;
-    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp.woff') format('woff');
+  font-family: 'D-DIN Exp';
+  font-style: normal;
+  font-weight: 400;
+  src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'D-DIN Exp';
-    font-style: italic;
-    font-weight: 400;
-    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp-Italic.woff') format('woff');
+  font-family: 'D-DIN Exp';
+  font-style: italic;
+  font-weight: 400;
+  src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp-Italic.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'D-DIN Condensed';
-    font-style: normal;
-    font-weight: 700;
-    src: local('D-DIN Condensed'), url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed-Bold.woff') format('woff');
+  font-family: 'D-DIN Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('D-DIN Condensed'), url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed-Bold.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'D-DIN Exp';
-    font-style: normal;
-    font-weight: 700;
-    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp-Bold.woff') format('woff');
+  font-family: 'D-DIN Exp';
+  font-style: normal;
+  font-weight: 700;
+  src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp-Bold.woff') format('woff');
 }
 
 :root {
@@ -197,6 +204,14 @@ select {
   color: var(--main-color);
 }
 
+.lesbian-gradient {
+  background: linear-gradient(45deg, #D62900, #FF9B55, #FFFFFF, #D461A6, #A50062);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
 .popup {
   visibility: hidden;
   position: fixed;
@@ -299,6 +314,7 @@ select {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

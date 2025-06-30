@@ -249,10 +249,10 @@ export default function ProfilePage({ onBack, verse }: ProfilePageProps) {
             >
               ACHERON,
             </MoreInfo>
-            {"or "}
+            {" or "}
             <MoreInfo
               className="acolor"
-              info="Yomi/Huángquán, the Japanese/Chinese concepts of the River in the Land of the Dead."
+              info="Yomi/Huángquán, the Japanese Underworld/'Yellow River', the River of the Dead, where the souls of the departed reside."
             >
               黄泉,
             </MoreInfo>{" "}
@@ -263,6 +263,12 @@ export default function ProfilePage({ onBack, verse }: ProfilePageProps) {
           </p>
           <p>
             <b>WEIGHT</b> 72 kg, 158lbs
+          </p>
+          <p>
+            <b>PRONOUNS</b> she/he
+          </p>
+          <p>
+            <b>SEXUALITY</b> <span className="lesbian-gradient">Lesbian</span>
           </p>
           <p>
             <b>AGE</b> <span className={`spoiler revealed`}>At least a few centuries, appears to be</span> in her late
