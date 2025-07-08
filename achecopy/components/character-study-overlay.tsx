@@ -15,7 +15,7 @@ export default function CharacterStudyOverlay({ isOpen, onClose, title, content 
 
   return (
     <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm font-['D-DIN']">
-      <div className="fixed inset-4 bg-[#0f0f0f] border border-[#b21919] overflow-hidden flex flex-col">
+      <div className="min-w-[300px] fixed inset-4 bg-[#0f0f0f] border border-[#b21919] flex flex-col w-1/2 mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-[#b21919] bg-[#0f0f0f]">
           <h2 className="text-lg font-semibold text-[#7c5cff] font-['D-DIN']">{title}</h2>
@@ -34,8 +34,7 @@ export default function CharacterStudyOverlay({ isOpen, onClose, title, content 
           <div className="character-study-content" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </div>
-
-      <style jsx>{`
+      <style type="text/css">{`
         .character-study-content {
           font-family: 'D-DIN', sans-serif;
         }
@@ -50,7 +49,6 @@ export default function CharacterStudyOverlay({ isOpen, onClose, title, content 
 
         .character-study-content .acheron-container {
           background-color: #0f0f0f;
-          max-width: 800px;
           width: 100%;
         }
 
