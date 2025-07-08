@@ -3,59 +3,66 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'D-DIN';
-    font-style: normal;
-    font-weight: 400;
-    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN.woff') format('woff');
+  font-family: "D-DIN";
+  font-style: normal;
+  font-weight: 400;
+  src: local("D-DIN"), url("https://fonts.cdnfonts.com/s/23112/D-DIN.woff") format("woff");
 }
+
 @font-face {
-    font-family: 'D-DIN';
-    font-style: italic;
-    font-weight: 400;
-    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN-Italic.woff') format('woff');
+  font-family: "D-DIN";
+  font-style: italic;
+  font-weight: 400;
+  src: local("D-DIN"), url("https://fonts.cdnfonts.com/s/23112/D-DIN-Italic.woff") format("woff");
 }
+
 @font-face {
-    font-family: 'D-DIN';
-    font-style: normal;
-    font-weight: 700;
-    src: local('D-DIN'), url('https://fonts.cdnfonts.com/s/23112/D-DIN-Bold.woff') format('woff');
+  font-family: "D-DIN";
+  font-style: normal;
+  font-weight: 700;
+  src: local("D-DIN"), url("https://fonts.cdnfonts.com/s/23112/D-DIN-Bold.woff") format("woff");
 }
+
 @font-face {
-    font-family: 'D-DIN Condensed';
-    font-style: normal;
-    font-weight: 400;
-    src: local('D-DIN Condensed'), url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed.woff') format('woff');
+  font-family: "D-DIN Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: local("D-DIN Condensed"), url("https://fonts.cdnfonts.com/s/23112/D-DINCondensed.woff") format("woff");
 }
+
 @font-face {
-    font-family: 'D-DIN Exp';
-    font-style: normal;
-    font-weight: 400;
-    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp.woff') format('woff');
+  font-family: "D-DIN Exp";
+  font-style: normal;
+  font-weight: 400;
+  src: local("D-DIN Exp"), url("https://fonts.cdnfonts.com/s/23112/D-DINExp.woff") format("woff");
 }
+
 @font-face {
-    font-family: 'D-DIN Exp';
-    font-style: italic;
-    font-weight: 400;
-    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp-Italic.woff') format('woff');
+  font-family: "D-DIN Exp";
+  font-style: italic;
+  font-weight: 400;
+  src: local("D-DIN Exp"), url("https://fonts.cdnfonts.com/s/23112/D-DINExp-Italic.woff") format("woff");
 }
+
 @font-face {
-    font-family: 'D-DIN Condensed';
-    font-style: normal;
-    font-weight: 700;
-    src: local('D-DIN Condensed'), url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed-Bold.woff') format('woff');
+  font-family: "D-DIN Condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: local("D-DIN Condensed"), url("https://fonts.cdnfonts.com/s/23112/D-DINCondensed-Bold.woff") format("woff");
 }
+
 @font-face {
-    font-family: 'D-DIN Exp';
-    font-style: normal;
-    font-weight: 700;
-    src: local('D-DIN Exp'), url('https://fonts.cdnfonts.com/s/23112/D-DINExp-Bold.woff') format('woff');
+  font-family: "D-DIN Exp";
+  font-style: normal;
+  font-weight: 700;
+  src: local("D-DIN Exp"), url("https://fonts.cdnfonts.com/s/23112/D-DINExp-Bold.woff") format("woff");
 }
 
 :root {
   --main-color: #b21919;
   --sub-color: #7c5cff;
   --alt-color: #7c5cff;
-  --accent-color: #e1af8e;
+  --accent-color: #ffc0cb;
   --gradient-start: #6b3ab6;
   --gradient-mid: #d6c9d3;
   --gradient-end: #b10000;
@@ -80,6 +87,23 @@ body {
 body b,
 body strong {
   color: var(--main-color);
+}
+
+/* Standardized link styling */
+a {
+  color: var(--sub-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  font-family: "D-DIN", sans-serif;
+}
+
+a:hover {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: #9d7bff;
 }
 
 /* Ensure D-DIN font is used everywhere */
@@ -197,6 +221,14 @@ select {
   color: var(--main-color);
 }
 
+.lesbian-gradient {
+  background: linear-gradient(45deg, #d62900, #ff9b55, #ffffff, #d461a6, #a50062);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
 .popup {
   visibility: hidden;
   position: fixed;
@@ -295,10 +327,83 @@ select {
   width: 0;
 }
 
+/* Volume slider styling */
+.volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #2c2c2c;
+  border-radius: 2px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: var(--sub-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 2px rgba(124, 92, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+  background: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(178, 25, 25, 0.3);
+  transform: scale(1.1);
+}
+
+.volume-slider::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #2c2c2c;
+  border-radius: 2px;
+  border: none;
+}
+
+.volume-slider::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: var(--sub-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 2px rgba(124, 92, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.volume-slider::-moz-range-thumb:hover {
+  background: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(178, 25, 25, 0.3);
+  transform: scale(1.1);
+}
+
+/* Volume slider progress fill */
+.volume-slider {
+  background: linear-gradient(
+    to right,
+    var(--sub-color) 0%,
+    var(--sub-color) var(--volume-percent, 50%),
+    #2c2c2c var(--volume-percent, 50%),
+    #2c2c2c 100%
+  );
+}
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
