@@ -34,6 +34,7 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const progressRef = useRef<HTMLDivElement>(null)
   const hasAutoPlayed = useRef(false)
+  const shouldPlayNext = useRef(false)
 
   // Initial setup: listeners + responsive expand
   useEffect(() => {
@@ -52,13 +53,28 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
       setDuration(audio.duration)
       if (autoPlay && !hasAutoPlayed.current && audio.duration > 0) {
         hasAutoPlayed.current = true
+        setIsPlaying(true)
+        audio.play().catch(() => {})
+      }
+      // If we should play the next track after loading
+      if (shouldPlayNext.current && audio.duration > 0) {
+        shouldPlayNext.current = false
+        setIsPlaying(true)
         audio.play().catch(() => {})
       }
     }
 
     const onEnded = () => {
-      audio.currentTime = 0
-      audio.play().catch(() => {})
+      // Check if this is the last track
+      if (currentTrack < tracks.length - 1) {
+        // Move to next track and mark that it should play
+        shouldPlayNext.current = true
+        setCurrentTrack((prev) => prev + 1)
+      } else {
+        // Last track ended, restart from beginning
+        shouldPlayNext.current = true
+        setCurrentTrack(0)
+      }
     }
 
     const onPlay = () => setIsPlaying(true)
@@ -93,9 +109,8 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
     const audio = audioRef.current!
     audio.src = tracks[currentTrack].src
     audio.load()
-    if (isPlaying) {
-      audio.play().catch(() => {})
-    }
+    // Reset current time when switching tracks
+    setCurrentTime(0)
   }, [currentTrack])
 
   // Volume effect
@@ -107,8 +122,11 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
 
   const togglePlay = () => {
     const audio = audioRef.current!
-    if (isPlaying) audio.pause()
-    else audio.play().catch(() => {})
+    if (isPlaying) {
+      audio.pause()
+    } else {
+      audio.play().catch(() => {})
+    }
   }
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -116,6 +134,7 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
   }
 
   const playTrack = (index: number) => {
+    shouldPlayNext.current = isPlaying // Maintain playing state when manually selecting
     setCurrentTrack(index)
   }
 
@@ -174,7 +193,7 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
         <div className="flex items-center justify-between mb-4">
           <button
             onClick={togglePlay}
-            className="w-10 h-10 rounded-full bg-[#b21919] hover:bg-[#7c5cff] flex items-center justify-center"
+            className="w-10 h-10 rounded-full bg-[#b21919] hover:bg-[#7c5cff] flex items-center justify-center transition-colors duration-200"
           >
             <svg viewBox="0 0 24 24" className="w-5 h-5" style={{ marginLeft: isPlaying ? 0 : 1 }}>
               {isPlaying ? (
@@ -186,18 +205,17 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
           </button>
           <div className="flex items-center gap-2">
             <Volume2 className="w-4 h-4" />
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={handleVolumeChange}
-              className="w-24 h-1"
-              style={{
-                background: `linear-gradient(to right, #7c5cff 0%, #7c5cff ${volume * 100}%, rgba(255,255,255,0.1) ${volume * 100}%, rgba(255,255,255,0.1) 100%)`,
-              }}
-            />
+            <div className="relative w-24">
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value={volume}
+                onChange={handleVolumeChange}
+                className="volume-slider w-full h-1 bg-[#2c2c2c] rounded-lg appearance-none cursor-pointer"
+              />
+            </div>
           </div>
         </div>
 
@@ -205,7 +223,7 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
           {tracks.map((track, idx) => (
             <div
               key={track.id}
-              className={`flex items-center gap-3 p-2 cursor-pointer rounded ${idx === currentTrack ? "text-[#b21919] bg-white/5" : "hover:bg-white/10"}`}
+              className={`flex items-center gap-3 p-2 cursor-pointer rounded transition-colors duration-200 ${idx === currentTrack ? "text-[#b21919] bg-white/5" : "hover:bg-white/10"}`}
               onClick={() => playTrack(idx)}
             >
               <span className="text-sm opacity-50 w-6">{String(idx + 1).padStart(2, "0")}</span>
