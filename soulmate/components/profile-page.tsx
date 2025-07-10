@@ -873,6 +873,9 @@ export default function ProfilePage({ onBack, verse }: ProfilePageProps) {
             {"."}
           </p>
           <p>
+            <b>SOULMATE</b> None known.
+          </p>
+          <p>
             <b>SPECIES</b> <span className={`spoiler revealed`}>Oni</span>
           </p>
           <p>
