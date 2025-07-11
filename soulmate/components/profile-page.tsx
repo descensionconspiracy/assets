@@ -104,7 +104,7 @@ export default function ProfilePage({ onBack, verse }: ProfilePageProps) {
                         </div>
                         <div class="info-item">
                             <div class="label">SOULMATE</div>
-                            <div><strong>None known.</strong></div>
+                            <div><strong>Cyrene.</strong></div>
                         </div>
                         <div class="info-item">
                             <div class="label">Race/Species</div>
@@ -873,7 +873,7 @@ export default function ProfilePage({ onBack, verse }: ProfilePageProps) {
             {"."}
           </p>
           <p>
-            <b>SOULMATE</b> None known.
+            <b>SOULMATE</b> <a className="altcolor" href="https://docs.google.com/document/d/1iNUqtDo5RSrBnPJCOEH2VKghNPO_wS_PL5G5564lMQo/edit?tab=t.0">Cyrene</a>.
           </p>
           <p>
             <b>SPECIES</b> <span className={`spoiler revealed`}>Oni</span>
