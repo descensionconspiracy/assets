@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --crimson: 0 100% 30%;
+  --crimson-light: 0 100% 40%;
+  --crimson-dark: 0 100% 20%;
+
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 70%;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+    font-size: 16px;
+    font-family: var(--font-vollkorn);
+  }
+
+  b,
+  strong {
+    @apply text-crimson;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-alice);
+  }
+
+  blockquote,
+  .subtext {
+    font-family: var(--font-alegreya);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-crimson/30 rounded-md;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-crimson/50;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Diagonal pattern background */
+.bg-diagonal-pattern {
+  background-image: linear-gradient(
+    45deg,
+    rgba(139, 0, 0, 0.05) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(139, 0, 0, 0.05) 50%,
+    rgba(139, 0, 0, 0.05) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 10px 10px;
+}
+
+/* Radial gradient */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);
+}
+
+/* Custom utility classes */
+.text-crimson {
+  @apply text-[hsl(var(--crimson))];
+}
+
+.bg-crimson {
+  @apply bg-[hsl(var(--crimson))];
+}
+
+.border-crimson {
+  @apply border-[hsl(var(--crimson))];
+}
+
+.hover\:text-crimson:hover {
+  @apply text-[hsl(var(--crimson))];
+}
+
+.hover\:bg-crimson:hover {
+  @apply bg-[hsl(var(--crimson))];
+}
+
+.hover\:border-crimson:hover {
+  @apply border-[hsl(var(--crimson))];
+}
+
+/* Font classes */
+.font-display {
+  font-family: var(--font-alice);
+}
+
+.font-quote {
+  font-family: var(--font-alegreya);
+}
+
+.font-body {
+  font-family: var(--font-vollkorn);
+}
+
+/* Main title styling */
+.main-title {
+  color: transparent;
+  font-family: var(--font-alice);
+  letter-spacing: 0.2rem;
+  width: calc(100% + 0.2rem);
+  font-size: 2.25em;
+  line-height: 1.5;
+  font-weight: 400;
+  background-image: linear-gradient(0deg, #8f1e1e 25%, transparent 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.03em #8f1e1e;
+  text-stroke: 0.03em #8f1e1e;
+}
