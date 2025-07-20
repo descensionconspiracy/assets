@@ -1262,7 +1262,14 @@ export default function ProfilePage({ onBack, verse }: ProfilePageProps) {
                       <p>
                         <b>ART</b>{" "}
                         <a href="https://zephyrine-gale.tumblr.com/post/754278829130924032/acheron">Zephyrine Gale, </a>
-                        <a href="https://x.com/llmia4/status/1772928568869196049">Llmia4.</a>
+                        <a href="https://x.com/llmia4/status/1772928568869196049">Llmia4,</a>
+                        <a href="https://www.tumblr.com/mothermakkar/771133320419573760/i-just-like-to-think-that-acheron-subtly-broke-the">MotherMakkar,</a>
+                        <a href="https://www.tumblr.com/pawnyao/745383064695439360/prey">Pawnyao,</a>
+                        <a href="https://x.com/michel_angelo_z/status/1769948652284649611/photo/1">Michel.</a>
+                      </p>
+                      <p>
+                        <b>PSD</b>{" "}
+                        <a href="https://jessource.tumblr.com/post/746549393580277761/41-chaos-theory-template-by">Spilled, by JessSource </a>
                       </p>
                       <p>
                         <b>MUSIC</b> HOYO-MIX, Black Kirin (Metal band)
