@@ -25,7 +25,6 @@ export default function ProfilePage() {
       aliases: "'Knave', 'Perrie', 'Arle', 'Father'",
       titles: "The Knave, Lord, The Bloody Marquess",
       age: "32 years-old",
-      soulmate: "None known",
       species: "Cursed Human",
       birthday: "August 22",
       occupation: "Fatui Harbinger, Diplomat, Father of the House of Hearth",
