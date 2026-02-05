@@ -214,6 +214,9 @@ export default function AudioPlayer({ autoPlay = false }: AudioPlayerProps) {
                 value={volume}
                 onChange={handleVolumeChange}
                 className="volume-slider w-full h-1 bg-[#2c2c2c] rounded-lg appearance-none cursor-pointer"
+                style={{
+                  background: `linear-gradient(to right, #b21919 0%, #b21919 ${volume * 100}%, #2c2c2c ${volume * 100}%, #2c2c2c 100%)`
+                }}
               />
             </div>
           </div>

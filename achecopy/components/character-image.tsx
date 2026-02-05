@@ -17,8 +17,8 @@ export default function CharacterImage({ spoilersRevealed, onToggleSpoilers }: C
         <Image
           src={
             spoilersRevealed
-              ? "https://cdn.imgchest.com/files/7bwckodm357.jpg"
-              : "https://cdn.imgchest.com/files/49zc2aml5wy.png"
+              ? "https://cdn.imgchest.com/files/feaa4b42109a.png"
+              : "https://cdn.imgchest.com/files/f395a2d0f399.png"
           }
           alt="Acheron"
           fill

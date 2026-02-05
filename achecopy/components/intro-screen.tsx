@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 interface IntroScreenProps {
-  onEnter: (verse: "shadow" | "ghost") => void
+  onEnter: () => void
 }
 
 export default function IntroScreen({ onEnter }: IntroScreenProps) {
@@ -109,10 +109,10 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
           </div>
         </div>
 
-        {/* Verse Selection Buttons */}
+        {/* Enter Button */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <Button
-            onClick={() => onEnter("shadow")}
+            onClick={onEnter}
             className="relative bg-transparent border-2 border-[#b21919] text-white hover:bg-[#b21919]/20 hover:border-[#7c5cff] hover:text-white transition-all duration-500 px-8 py-4 text-base font-semibold tracking-wider group overflow-hidden font-['D-DIN'] hover:scale-105"
           >
             {/* Enhanced button background effect */}

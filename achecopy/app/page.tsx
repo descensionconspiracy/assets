@@ -6,10 +6,8 @@ import ProfilePage from "@/components/profile-page"
 
 export default function Home() {
   const [currentView, setCurrentView] = useState<"intro" | "profile">("intro")
-  const [selectedVerse, setSelectedVerse] = useState<"shadow" | "ghost">("shadow")
 
-  const handleEnterVerse = (verse: "shadow" | "ghost") => {
-    setSelectedVerse(verse)
+  const handleEnter = () => {
     setCurrentView("profile")
   }
 
@@ -18,8 +16,8 @@ export default function Home() {
   }
 
   if (currentView === "profile") {
-    return <ProfilePage onBack={handleBackToIntro} verse={selectedVerse} />
+    return <ProfilePage onBack={handleBackToIntro} />
   }
 
-  return <IntroScreen onEnter={handleEnterVerse} />
+  return <IntroScreen onEnter={handleEnter} />
 }
