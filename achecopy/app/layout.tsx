@@ -17,7 +17,7 @@ export default function RootLayout({
             <meta property="twitter:url" content="https://www.bosenmori.lat/" />
             <meta property="twitter:title" content="ACHERON" />
             <meta property="twitter:description" content="a character sheet for ACHERON, from HONKAI: STAR RAIL." />
-            <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" /></head>
+            <meta property="twitter:image" content="https://cdn.imgchest.com/files/3f87e135b011.png" /></head>
       <body>{children}</body>
     </html>
   )
