@@ -259,7 +259,7 @@ I forget the lyrics she sang. But I remember the weight of the silence that foll
             {"."}
           </p>
           <p>
-            <b>HEIGHT</b> 178 cm, 5'10"
+            <b>HEIGHT</b> 183cm, 6ft
           </p>
           <p>
             <b>WEIGHT</b> 72 kg, 158lbs
